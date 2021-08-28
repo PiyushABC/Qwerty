@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body{
+			background-color: lightcyan;
+		}
+		#ID1{
+			background-color: coral;
+		}
+		#ID2{
+			background-color: coral;
+		}
+		#whole{
+			background-color: lightgrey;
+			width: 1350px;
+			border: 1px solid blue;	
+		}
+		#paragraph1{
+			color: darkred;
+		}
+		.colourbox:focus{
+			background-color: cadetblue;
+		}
+
+
+	</style>
+	<title>Login</title>
+</head>
+<body>
+	<form name = "form1" action = "newfile29.html" onsubmit = "return first()">
+		<div id = "whole">
+		<center>
+		<img src="http://www.sldcassam.in/images/login.png" align="middle">
+		<p id = "paragraph1"></p>
+		<div id = "ID1"><p><b>Username</b></p></div>
+		<input type = "text" name = "textbox1" placeholder = "Username" class = "colourbox">
+		
+		<div id = "ID2"><p><b>Password</b></p></div>
+		<input type = "password" name = "password1" placeholder = "Password" class = "colourbox">
+		
+		<br><br><br>
+		<input type = "submit" name = "Submit">
+		<br>
+		<p></p>	
+		</center> 
+		</div>
+	</form>
+
+
+	<script>
+		function first(){
+			var a = document.form1.textbox1.value;
+			var b = document.form1.password1.value;
+			if (a == "Piyush" && b == "abc"){
+				alert("You have succesfully logined")
+				return true;
+			}
+			else{
+				document.getElementById("paragraph1").innerHTML = "Sorry invalid credintials please try again later";
+				return false;
+			}
+
+		}
+	</script>
+
+</body>
+</html>
